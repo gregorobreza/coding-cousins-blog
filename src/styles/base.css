@@ -1,0 +1,17 @@
+/* The integration's default injected base.css file */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bkg: 184deg 100% 97%;
+    --color-content: 212deg 79% 11%;
+    @apply bg-bkg text-content  [transition:color_ease-in-out_2s,background-color_ease-in-out_1s];
+  }
+  :root.dark {
+    --color-bkg: 212deg 79% 11%;
+    --color-content: 184deg 100% 97%;
+    @apply bg-bkg text-content  [transition:color_ease-in-out_2s,background-color_ease-in-out_1s];
+  }
+}

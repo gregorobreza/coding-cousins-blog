@@ -3,15 +3,35 @@
 @tailwind components;
 @tailwind utilities;
 
+/* titillium-web-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/titillium-web-v17-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* russo-one-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Russo One";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/russo-one-v16-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 @layer base {
   :root {
     --color-bkg: 184deg 100% 97%;
     --color-content: 212deg 79% 11%;
-    @apply bg-bkg text-content  [transition:color_ease-in-out_2s,background-color_ease-in-out_1s];
+    /* @apply bg-bkg text-content  [transition:color_ease-in-out_2s,background-color_ease-in-out_1s]; */
+    @apply bg-bkg text-content;
   }
   :root.dark {
     --color-bkg: 212deg 79% 11%;
     --color-content: 184deg 100% 97%;
-    @apply bg-bkg text-content  [transition:color_ease-in-out_2s,background-color_ease-in-out_1s];
+    @apply bg-bkg text-content;
+    /* @apply bg-bkg text-content  [transition:color_ease-in-out_2s,background-color_ease-in-out_1s]; */
   }
 }

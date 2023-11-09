@@ -1,13 +1,13 @@
 html {
   /* background-color: #EEFEFF;
   color: #061B33; */
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
 }
 
 body {
   margin: 0 auto;
   width: 100%;
-  max-width: 80ch;
+  max-width: 50vw;
   padding: 1rem;
   line-height: 1.5;
 }

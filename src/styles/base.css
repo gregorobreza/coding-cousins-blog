@@ -22,16 +22,32 @@
 }
 
 @layer base {
-  :root {
+  /* :root {
     --color-bkg: 184deg 100% 97%;
     --color-content: 212deg 79% 11%;
-    /* @apply bg-bkg text-content  [transition:color_ease-in-out_2s,background-color_ease-in-out_1s]; */
-    @apply bg-bkg text-content;
-  }
-  :root.dark {
+    @apply bg-bkg text-content  [transition:color_ease-in-out_0.5s,background-color_ease-in-out_1s];
+  } */
+  :root {
     --color-bkg: 212deg 79% 11%;
     --color-content: 184deg 100% 97%;
-    @apply bg-bkg text-content;
-    /* @apply bg-bkg text-content  [transition:color_ease-in-out_2s,background-color_ease-in-out_1s]; */
+    @apply bg-bkg text-content  [transition:color_ease-in-out_0.5s,background-color_ease-in-out_1s];
+  }
+  :root.dark {
+    /* --color-bkg: 212deg 79% 11%; */
+    /* --color-content: 184deg 100% 97%; */
+    /* @apply bg-bkg text-content; */
+    /* @apply bg-bkg text-content  [transition:color_ease-in-out_0.5s,background-color_ease-in-out_1s]; */
+  }
+  :root[data-mode="light"] {
+    --color-bkg: 184deg 100% 97%;
+    --color-content: 212deg 79% 11%;
+    @apply bg-bkg text-content  [transition:color_ease-in-out_0.5s,background-color_ease-in-out_1s];
+    /* @apply bg-bkg text-content; */
+  }
+  :root[data-mode="dark"] {
+    --color-bkg: 212deg 79% 11%;
+    --color-content: 184deg 100% 97%;
+    /* @apply bg-bkg text-content; */
+    @apply bg-bkg text-content  [transition:color_ease-in-out_0.5s,background-color_ease-in-out_1s];
   }
 }

@@ -148,12 +148,12 @@
     if (theme === "light") {
       // document.documentElement.classList.add("light");
       // document.documentElement.classList.remove("dark");
-      document.getElementById("chk").checked = true
+      document.getElementById("chk").checked = true;
       document.documentElement.setAttribute("data-mode", "light");
     } else {
       // document.documentElement.classList.add("dark");
       // document.documentElement.classList.remove("light");
-      document.getElementById("chk").checked = false
+      document.getElementById("chk").checked = false;
       document.documentElement.setAttribute("data-mode", "dark");
     }
 
@@ -175,7 +175,9 @@
       .getElementById("themeToggle")
       .addEventListener("click", handleToggleClick);
 
-    document.getElementById("chk").addEventListener("change", handleToggleClick);
+    document
+      .getElementById("chk")
+      .addEventListener("change", handleToggleClick);
   });
 </script>
 
@@ -193,13 +195,13 @@
   if (theme === "light") {
     // document.documentElement.classList.add("light");
     // document.documentElement.classList.remove("dark");
-    document.getElementById("chk").checked = true
+    document.getElementById("chk").checked = true;
 
     document.documentElement.setAttribute("data-mode", "light");
   } else {
     // document.documentElement.classList.add("dark");
     // document.documentElement.classList.remove("light");
-    document.getElementById("chk").checked = false
+    document.getElementById("chk").checked = false;
 
     document.documentElement.setAttribute("data-mode", "dark");
   }
@@ -209,9 +211,11 @@
 
 <script>
   document.addEventListener("astro:after-swap", () => {
-    // localStorage.theme === "dark"
-    //   ? document.documentElement.classList.add("dark")
-    //   : document.documentElement.classList.add("light");
+    if (localStorage.theme === "dark") {
+      document.getElementById("chk").checked = false;
+    } else {
+      document.getElementById("chk").checked = true;
+    }
     localStorage.theme === "dark"
       ? document.documentElement.setAttribute("data-mode", "dark")
       : document.documentElement.setAttribute("data-mode", "light");

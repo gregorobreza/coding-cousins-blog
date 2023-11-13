@@ -9,7 +9,7 @@ body {
   width: 100%;
   max-width: 50vw;
   padding: 1rem;
-  line-height: 1.5;
+  /* line-height: 1.5; */
 }
 
 * {

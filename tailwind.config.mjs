@@ -12,6 +12,7 @@ export default {
 			},
 			fontFamily: {
 				'sans': ['"Titillium Web"', ...defaultTheme.fontFamily.sans],
+				'headings': ['"Russo One"', ...defaultTheme.fontFamily.sans]
 			  },
 		},
 	},

@@ -5,7 +5,7 @@
 
 /* titillium-web-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: block; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Titillium Web";
   font-style: normal;
   font-weight: 400;
@@ -14,7 +14,7 @@
 
 /* russo-one-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: block; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Russo One";
   font-style: normal;
   font-weight: 400;
@@ -30,7 +30,8 @@
   :root {
     --color-bkg: 212deg 79% 11%;
     --color-content: 184deg 100% 97%;
-    @apply bg-bkg text-content  [transition:color_ease-in-out_0.5s,background-color_ease-in-out_1s];
+    /* @apply bg-bkg text-content  [transition:color_ease-in-out_0.5s,background-color_ease-in-out_0.7s]; */
+    @apply bg-bkg text-content ;
   }
   :root.dark {
     /* --color-bkg: 212deg 79% 11%; */
@@ -41,13 +42,16 @@
   :root[data-mode="light"] {
     --color-bkg: 184deg 100% 97%;
     --color-content: 212deg 79% 11%;
-    @apply bg-bkg text-content  [transition:color_ease-in-out_0.5s,background-color_ease-in-out_1s];
-    /* @apply bg-bkg text-content; */
+    /* @apply bg-bkg text-content  [transition:color_ease-in-out_0.5s,background-color_ease-in-out_0.7s]; */
+    @apply bg-bkg text-content;
   }
   :root[data-mode="dark"] {
     --color-bkg: 212deg 79% 11%;
     --color-content: 184deg 100% 97%;
-    /* @apply bg-bkg text-content; */
-    @apply bg-bkg text-content  [transition:color_ease-in-out_0.5s,background-color_ease-in-out_1s];
+    @apply bg-bkg text-content;
+    /* @apply bg-bkg text-content  [transition:color_ease-in-out_0.5s,background-color_ease-in-out_0.7s]; */
+  }
+  h1, h2{
+    @apply font-headings
   }
 }

@@ -1,8 +1,20 @@
 ---
+const navLinks = [
+  { link: "/", label: "Home" },
+  { link: "/blog", label: "Blog" },
+  { link: "/about", label: "About" },
+];
 ---
-<div  class="nav-links">
-    <a href="/">Home</a>
-    <a href="/blog">Blog</a>
-    <a href="/about">About</a>
-    <!-- <a href="/tags">Tags</a> -->
-  </div>
+
+<div class=`flex justify-between text-2xl`>
+  {
+    navLinks.map((link) => (
+      <a
+        class="hover:text-detail-red transition-colors ease-in-out delay-150 duration-500"
+        href={link.link}
+      >
+        {link.label}
+      </a>
+    ))
+  }
+</div>

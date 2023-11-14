@@ -5,7 +5,14 @@ import ThemeIcon from "./ThemeIcon.astro";
 ---
 
 <nav>
-  <Hamburger />
+  <!-- <Hamburger />
   <ThemeIcon />
-  <Navigation />
+  <Navigation /> -->
+  <div class="flex justify-between">
+    <div class="grid grid-cols-1 divide-y-2 divide-detail-red">
+      <div class="font-headings text-4xl">Coding Cousins</div>
+      <Navigation />
+    </div>
+    <ThemeIcon />
+  </div>
 </nav>

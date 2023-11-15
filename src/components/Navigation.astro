@@ -9,11 +9,9 @@ const navLinks = [
 <div class=`flex justify-between text-2xl`>
   {
     navLinks.map((link) => (
-      <a
-        class="hover:text-detail-red transition-colors ease-in-out delay-150 duration-500"
-        href={link.link}
-      >
+      <a class="group " href={link.link}>
         {link.label}
+        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-detail-red" />
       </a>
     ))
   }

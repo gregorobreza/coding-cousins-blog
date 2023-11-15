@@ -1,5 +1,6 @@
 ---
 import Navigation from "./Navigation.astro";
+import RssIcon from "./RssIcon.astro";
 import Hamburger from "./Hamburger.astro";
 import ThemeIcon from "./ThemeIcon.astro";
 ---
@@ -13,6 +14,9 @@ import ThemeIcon from "./ThemeIcon.astro";
       <div class="font-headings text-4xl">Coding Cousins</div>
       <Navigation />
     </div>
-    <ThemeIcon />
+    <div class="flex gap-8 items-center">
+      <ThemeIcon />
+      <RssIcon />
+    </div>
   </div>
 </nav>

@@ -27,7 +27,7 @@
     --color-content: 184deg 100% 97%;
     --color-detail-red: 0deg 100% 50%;
     /* @apply bg-bkg text-content  [transition:color_ease-in-out_0.5s,background-color_ease-in-out_0.7s]; */
-    @apply bg-bkg text-content p-5 w-full mx-auto;
+    @apply bg-bkg text-content;
   }
   body{
     @apply p-5 w-full mx-auto my-0 max-w-3xl;

@@ -1,6 +1,7 @@
 ---
 import Navigation from "./Navigation.astro";
-import RssIcon from "./RssIcon.astro";
+import RssIcon from "./icons/RssIcon.astro";
+import IconButton from "./IconButton.astro";
 import Hamburger from "./Hamburger.astro";
 import ThemeIcon from "./ThemeIcon.astro";
 ---
@@ -16,7 +17,9 @@ import ThemeIcon from "./ThemeIcon.astro";
     </div>
     <div class="flex gap-8 items-center">
       <ThemeIcon />
-      <RssIcon />
+      <IconButton >
+        <RssIcon size={5}/>
+      </IconButton>
     </div>
   </div>
 </nav>

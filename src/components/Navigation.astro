@@ -2,11 +2,12 @@
 const navLinks = [
   { link: "/", label: "Home" },
   { link: "/blog", label: "Blog" },
+  { link: "/projects", label: "Projects" },
   { link: "/about", label: "About" },
 ];
 ---
 
-<div class=`flex justify-between text-2xl`>
+<div class=`flex justify-between text-md`>
   {
     navLinks.map((link) => (
       <a class="group " href={link.link}>

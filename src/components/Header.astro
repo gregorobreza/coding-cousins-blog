@@ -1,25 +1,31 @@
 ---
-import Navigation from "./Navigation.astro";
-import RssIcon from "./icons/RssIcon.astro";
-import IconButton from "./IconButton.astro";
 import Hamburger from "./Hamburger.astro";
+import Navigation from "./Navigation.astro";
 import ThemeIcon from "./ThemeIcon.astro";
+import RssIcon from "./icons/RssIcon.astro";
 ---
 
 <nav>
-  <!-- <Hamburger />
-  <ThemeIcon />
-  <Navigation /> -->
+
   <div class="flex justify-between">
-    <div class="grid grid-cols-1 divide-y-2 divide-detail-red">
-      <div class="font-headings text-4xl">Coding Cousins</div>
-      <Navigation />
+    <div
+      class="grid grid-cols-1 divide-y-2 sm:divide-detail-red border-detail-red border-b-2 sm:border-none"
+    >
+      <div class="font-headings text-3xl sm:text-4xl">Coding Cousins</div>
+      <div class="hidden sm:block">
+        <Navigation />
+      </div>
     </div>
-    <div class="flex gap-8 items-center">
+    <div class="hidden sm:flex gap-6 items-center">
       <ThemeIcon />
-      <IconButton >
-        <RssIcon size={5}/>
-      </IconButton>
+      <div class="hover:text-slate-600 dark:hover:text-slate-300">
+        <a href="/blog">
+          <RssIcon size={5} />
+        </a>
+      </div>
+    </div>
+    <div class="sm:hidden">
+      <Hamburger />
     </div>
   </div>
 </nav>

@@ -1,10 +1,26 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import GithubIcon from "../components/icons/GithubIcon.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import IconButton from "../components/IconButton.astro";
+import LinkedInIcon from "../components/icons/LinkedInIcon.astro";
+import MailIcon from "../components/icons/MailIcon.astro";
 
 const pageTitle = "Home Page";
 ---
+
 <BaseLayout pageTitle={pageTitle}>
   <h2>My awesome blog subtitle</h2>
   <h3>My awesome blog subtitle another</h3>
-  <div class="font-bold" >bla bla</div>
+  <div class="font-bold">bla bla</div>
+  <div class="flex flex-row gap-5">
+    <IconButton>
+      <MailIcon size={5} />
+    </IconButton>
+    <IconButton>
+      <GithubIcon size={5} />
+    </IconButton>
+    <IconButton>
+      <LinkedInIcon size={5} />
+    </IconButton>
+  </div>
 </BaseLayout>

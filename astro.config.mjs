@@ -7,6 +7,10 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en"],
+  },
   site: "https://gregorobreza.github.io",
   //   base: "/coding-cousins-blog/",
   integrations: [

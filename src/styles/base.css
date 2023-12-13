@@ -52,4 +52,7 @@
   h2 {
     @apply font-headings;
   }
+  h2{
+    @apply text-2xl
+  }
 }
